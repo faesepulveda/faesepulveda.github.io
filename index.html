@@ -1,227 +1,206 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Massively by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+<title>Informe Hito 1</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<h1>INFORME HITO 1</h1>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Laboratorio Interdisciplinario de Estadística Social</h1>
-						<p>Facultad de Matematicas UC <a href="https://html5up.net/license">Creative Commons license</a>.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+<div class="contenedorTexto">
+    <h2> Abstracción de tareas </h2>
+    <p>En el primer parrafo del problema, se ve que la historiadora quiere comprobas
+      o refutar acusaciones acerca de un sesgo racial de parte de la policia estadounidense
+      claramente esto es una hipotesis que ella desea comprobar así entonces aqui identifico
+      la tarea de analizar, en particular consumir y descubrir evidencia a partir de los datos
+      del dataset police_killings.csv para esto podemos usar los atributos <i>raceethnicity</i>
+      y observar que raza se observa con mayor frecuencia. si bien es un analisis basico sirve
+      como punto de partida para el analisis
+    </p>
+    <p>Tambien la historiadora quiere contrastar distintos factores socio económicos, étnicos y criminales de
+      los distintos condados del dataset, aqui la tarea que identifico es la de consulta, en especifico comparar
+      multiples elementos que vendrian siendo las relaciones entre los factores socieconomicos
+      y el numero de muertes en cada sector, pues ella encontrara los datos de interés y luego los comparara
+      para contrastar con su hipotesis, aqui los datos a usar podrian ser
+      <i>p_income, county_income, nat_bucket, pov</i> que cuantifican nivel economico, 
+      y tambien <i>urate y college</i> que trata de factores sociales (desempleo y educación respectivamente)      
+    </p>
+    <p>Otra de las cosas que quiere saber la historiadora es las características de los difuntos, especificamente
+      saber si el número de personas difuntas pertenecientes a minorias raciales, es significativamente mayor
+      al de persona blancas.
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
-					</header>
+      para esta tarea identifico la acción de consumir datos a traves del descubrimiento por ejemplo, facilitando
+      algun filtro en la visualizacion asi se podria visualizar la información que ella busca aqui
+      los datos a usar especificamente son <i>raceethnicity</i> esta misma tarea aplica para buscar si un sexo biologico
+      dentro de cada etnia es mas afectado que el otro para esto filtramos por ethnia y luego por sexo
+      por lo tanto necesitaremos de la columna <i>gender</i>
+    </p>
+    <p>Finalmente, la investigadora quiere ver si hay patrones en los incidentes, en especifico
+      para fechas efemerides. Yo pienso que esto corresponde a la tarea de Analizar, particularmente,
+      a descubrir pues haremos algunos filtros en los datos y podremos ver si emergen patrones
+      para esto necesitamos el atributo <i>date</i> y alguna fuente externa con las fechas efemerides.
+    </p>
+    <h2>Abstracción de datos</h2>
+    <h3>name</h3>
+    <ul>
+        <li>¿Es un atributo categórico u ordenado?</li>
+        <p>los nombres no tienen orden intrinsico o natural, asi que es categorico</p>
+        <li>¿Es ordinal o cuantitativo?</li>
+        <p>no aplica, pues no hay orden ni cantidad que respresentar</p>
+        <li>¿Es secuencial o divergente?</li>
+        <p>no aplica</p>
+        <li>¿Es cíclico o no cíclio?</li>
+        <p>no aplica</p>
+      </ul>
+      <h3>age</h3>
+    <ul>
+        <li>¿Es un atributo categórico u ordenado?</li>
+        <p>ordenado pues es natural ordenar edades de menor a mayor o viceversa</p>
+        <li>¿Es ordinal o cuantitativo?</li>
+        <p>cuantitativo pues cuantifica años de vida de una persona</p>
+        <li>¿Es secuencial o divergente?</li>
+        <p>secuencial claramente </p>
+        <li>¿Es cíclico o no cíclio?</li>
+        <p>no es ciclico porque empieza en 0 y acaba en algun punto</p>
+      </ul>
+      <h3>gender</h3>
+    <ul>
+        <li>¿Es un atributo categórico u ordenado?</li>
+        <p>categorico, pues el genero no es ordenado</p>
+        <li>¿Es ordinal o cuantitativo?</li>
+        <p>no aplica</p>
+        <li>¿Es secuencial o divergente?</li>
+        <p>no aplica</p>
+        <li>¿Es cíclico o no cíclio?</li>
+        <p>no aplica</p>
+      </ul>
+      <h3>raceethnicity</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>categorico, pues la ethnia no es ordenada</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>no aplica</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>no aplica</p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no aplica</p>
+        </ul>
+        <h3>date</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>ordenado, es natural ordenar fechas.</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>cuantitativo pues cuantifica el paso del tiempo</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>se puede considerar divergente por el año 0. y el A.C y B.C</p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>es ciclicia en cuanto a meses pero no ciclica como un todo</p>
+        </ul>
+        <h3>city</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>categorico, pues la ciudad no es ordenada</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>no aplica</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>no aplica</p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no aplica</p>
+        </ul>
+        <h3>state</h3>
+      <ul>
+          <li>idem a ciudad</li>
+        </ul>
+        <h3>latitude</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>ordenado, pues define un orden geografico</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>cuantitativa, xq cuantifica distancias</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>secuencial pq va de 0 a 90° </p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no ciclico</p>
+        </ul>
+        <h3>longitude</h3>
+      <ul>
+          <li>idem a latitud</li>
+        </ul>
+        <h3>county_fp</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>es un id asi que no aplica</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>no aplica</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>no aplica </p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no ciclico</p>
+        </ul>
+        <h3>cause</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>categorico</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>no aplica no hay orden ni cuantificacion</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>no aplica </p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no ciclico</p>
+        </ul>
+        <h3>armed</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>categorico</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>no aplica, no hay orden ni cuantia</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>no aplica </p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no ciclico</p>
+        </ul>
+        <h3>share_white, share_black, share_hispanic</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>orden, pues se puede decir si es mayor o menor al resto de la poblacion</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>cuantitativa, cuantifica una proporcion o caracteristica de la poblacion</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>no aplica </p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no ciclico</p>
+        </ul>
+        <h3>p_income, county_income, pov, urate, college</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>ordenado</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>cuantitativo</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>no aplica </p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no ciclico</p>
+        </ul>
+        <h3>nat_bucket</h3>
+      <ul>
+          <li>¿Es un atributo categórico u ordenado?</li>
+          <p>categorico xq esta por quitnitles</p>
+          <li>¿Es ordinal o cuantitativo?</li>
+          <p>ordinal pq son categorias ordenadas</p>
+          <li>¿Es secuencial o divergente?</li>
+          <p>no aplica </p>
+          <li>¿Es cíclico o no cíclio?</li>
+          <p>no ciclico</p>
+        </ul>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">This is Massively</a></li>
-							<li><a href="generic.html">Generic Page</a></li>
-							<li><a href="elements.html">Elements Reference</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
 
-				<!-- Main -->
-					<div id="main">
+</div>
+<div id="contenedorImagen">
+    
+    <img src="data:image/jpeg;base64,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" width="600px" height="400px">
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">April 25, 2017</span>
-									<h2><a href="#">And this is a<br />
-									massive headline</a></h2>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/fondo.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">Full Story</a></li>
-								</ul>
-							</article>
+</div>
 
-						<!-- Posts -->
-							<section class="posts">
-								<article>
-									<header>
-										<span class="date">April 24, 2017</span>
-										<h2><a href="#">Sed magna<br />
-										ipsum faucibus</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 22, 2017</span>
-										<h2><a href="#">Primis eget<br />
-										imperdiet lorem</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 18, 2017</span>
-										<h2><a href="#">Ante mattis<br />
-										interdum dolor</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 11, 2017</span>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2017</span>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section>
-
-						<!-- Footer -->
-							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
-							</footer>
-
-					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+</body>
+</html> 
