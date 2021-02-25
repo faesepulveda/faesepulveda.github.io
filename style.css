@@ -1,5 +1,24 @@
-html {
-    font-family: sans-serif;
-    text-align: justify;
-    text-align: center;   
-  }
+/* estilo.css (esto es un comentario en CSS) */
+
+p {
+	color: blue;
+}
+
+li, h1, h2 {
+	color: blue;
+}
+
+.importante {
+	color: red;
+}
+
+#principal {
+	color: green;
+}
+
+
+ body {
+	background-color: #eeeeee;
+	font-family: monospace;
+	font-size: 20px;
+}
